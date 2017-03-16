@@ -1,0 +1,208 @@
+{
+	"id": "c069ffc9-4676-0963-d758-837382689e25",
+	"name": "Bowling",
+	"description": "",
+	"order": [
+		"2c27dcc9-dab3-0fe7-89c5-b9f80395dcf9",
+		"542f10d2-217f-a10c-4ac9-df9b54a40a57",
+		"518c3242-7873-7958-29a7-55ec1666e070",
+		"5b13460d-65ea-f89b-763b-3c44efbc468d",
+		"78f2b48a-c398-ba72-2e80-8e300c7b0d56",
+		"6f525009-f951-d345-4362-b36f5dbf5868",
+		"43bc4b49-17e0-f1b0-cc2e-feddab00c6be",
+		"f80858be-a1fa-2267-50e7-833c93cc071e"
+	],
+	"folders": [],
+	"timestamp": 1489412799528,
+	"owner": "1710956",
+	"public": false,
+	"requests": [
+		{
+			"id": "2c27dcc9-dab3-0fe7-89c5-b9f80395dcf9",
+			"headers": "",
+			"url": "localhost:8080/api/game/",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1489681914366,
+			"name": "Get All Games",
+			"description": "",
+			"collectionId": "c069ffc9-4676-0963-d758-837382689e25",
+			"responses": []
+		},
+		{
+			"id": "43bc4b49-17e0-f1b0-cc2e-feddab00c6be",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"url": "localhost:8080/api/game/{{game_id}}",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "PUT",
+			"data": [
+				{
+					"key": "pins",
+					"value": "10",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1489681303326,
+			"name": "Put 10 Pins",
+			"description": "",
+			"collectionId": "c069ffc9-4676-0963-d758-837382689e25",
+			"responses": []
+		},
+		{
+			"id": "518c3242-7873-7958-29a7-55ec1666e070",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"url": "localhost:8080/api/game/{{game_id}}",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": [
+				{
+					"key": "pins",
+					"value": "10",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1489681911141,
+			"name": "Get Single Game",
+			"description": "",
+			"collectionId": "c069ffc9-4676-0963-d758-837382689e25",
+			"responses": []
+		},
+		{
+			"id": "542f10d2-217f-a10c-4ac9-df9b54a40a57",
+			"headers": "",
+			"url": "localhost:8080/api/game/",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": "var data = JSON.parse(responseBody);\n\ntests[\"Status code is 200\"] = responseCode.code === 200;\npostman.setGlobalVariable(\"game_id\", data._id);",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1489681884723,
+			"name": "Create New Game",
+			"description": "",
+			"collectionId": "c069ffc9-4676-0963-d758-837382689e25",
+			"responses": []
+		},
+		{
+			"id": "5b13460d-65ea-f89b-763b-3c44efbc468d",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"url": "localhost:8080/api/game/{{game_id}}",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "PUT",
+			"data": [
+				{
+					"key": "pins",
+					"value": "0",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1489681906453,
+			"name": "Put 0 Pins",
+			"description": "",
+			"collectionId": "c069ffc9-4676-0963-d758-837382689e25",
+			"responses": []
+		},
+		{
+			"id": "6f525009-f951-d345-4362-b36f5dbf5868",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"url": "localhost:8080/api/game/{{game_id}}",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "PUT",
+			"data": [
+				{
+					"key": "pins",
+					"value": "8",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1489681301190,
+			"name": "Put 8 Pins",
+			"description": "",
+			"collectionId": "c069ffc9-4676-0963-d758-837382689e25",
+			"responses": []
+		},
+		{
+			"id": "78f2b48a-c398-ba72-2e80-8e300c7b0d56",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"url": "localhost:8080/api/game/{{game_id}}",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "PUT",
+			"data": [
+				{
+					"key": "pins",
+					"value": "2",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1489681901285,
+			"name": "Put 2 Pins",
+			"description": "",
+			"collectionId": "c069ffc9-4676-0963-d758-837382689e25",
+			"responses": []
+		},
+		{
+			"id": "f80858be-a1fa-2267-50e7-833c93cc071e",
+			"headers": "",
+			"url": "localhost:8080/api/game/{{game_id}}",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "DELETE",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": "tests[\"Status code is 204\"] = responseCode.code === 204;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1489681943912,
+			"name": "Delete Game",
+			"description": "",
+			"collectionId": "c069ffc9-4676-0963-d758-837382689e25",
+			"responses": []
+		}
+	]
+}
